@@ -34,8 +34,9 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
+    background-color: #484A47;
+    padding: 0px 20px;
+    height: 48px;
 `;
 
 const Logo = styled.div`
@@ -61,7 +62,12 @@ const NavLink = styled.a`
     display: inline-block;
     position: relative;
 
-    &.active::after,
+    /* if active or hovered, add purple bar below. */
+    &.active,
+    &:hover {
+        border-bottom: 3px solid purple;
+    }
+    /* &.active::after,
     &:hover::after {
         content: '';
         display: block;
@@ -71,5 +77,5 @@ const NavLink = styled.a`
         position: absolute;
         bottom: -5px;
         left: 0;
-    }
+    } */
 `;
