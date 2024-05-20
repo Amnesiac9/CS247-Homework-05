@@ -52,6 +52,11 @@ const StyledCard = styled.div`
     &:not(:hover){
         animation: ${({ theme }) => shrink(theme)} 225ms forwards;
     }
+
+    @media (max-width: 800px) {
+        width: 150px;
+        height: 150px;
+    }
     
 `
 

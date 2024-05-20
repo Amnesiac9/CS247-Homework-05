@@ -7,6 +7,13 @@ import { ThemeProvider } from "styled-components";
 import { DefaultTheme } from "styled-components/dist/types";
 
 
+// TODO:
+// 1) Fix menu height on mobile. Should be 100%.
+// 2) Fix menu not being on top.
+// 3) Fix reponsivness of projects on mobile to always have two by two.
+// 4) Fix breakpoints (Desktop >= 1200px, Laptop < 1200px AND >= 800px, Mobile <= 400px)
+
+
 const theme: DefaultTheme = {
     backgroundColor: '#242424',
     containerColor: '#484A47',

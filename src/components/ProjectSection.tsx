@@ -10,7 +10,7 @@ export default function ProjectSection(props: { Projects: Project[] }) {
         <Container>
             <H3>My current projects</H3>
             <Divider />
-            <FlexSection>
+            <FlexSection $flexFlow='wrap'>
                 {props.Projects.map((proj, i) =>
                     <StyledCard key={i} title={proj.title} summary={proj.summary} image={proj.image} link={proj.link} />
                 )}

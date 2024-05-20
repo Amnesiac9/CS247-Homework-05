@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
-const FlexSection = styled.div`
+const FlexSection = styled.div<{ $flexFlow?: string }>`
     display: flex;
 
-    @media (max-width: 913px) {
-        flex-flow: wrap-reverse;
+    @media (max-width: 550px) {
+        flex-flow: ${(props) => props.$flexFlow};
     }
 
 `
