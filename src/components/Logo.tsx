@@ -5,7 +5,7 @@ export default function Logo() {
     return (
         <LogoArea>
             <Icon alt='Logo' src={marsBytesLogo} />
-            <TextArea>MarsBytes Portfolio</TextArea>
+            <div>MarsBytes Portfolio</div>
         </LogoArea>
     )
 }
@@ -20,8 +20,4 @@ const Icon = styled.img`
     width: auto;
     height: 20px;
     margin-right: 6px;
-`
-
-const TextArea = styled.div`
-    
 `
