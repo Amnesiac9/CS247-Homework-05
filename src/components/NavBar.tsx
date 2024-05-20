@@ -73,16 +73,6 @@ to {
 }
 `
 
-const hoverFade = keyframes`
-from {
-    transform: translateX(0);
-    transform: translateX(100%);
-}
-to {
-    transform: translateX(100%);
-}
-`
-
 const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
