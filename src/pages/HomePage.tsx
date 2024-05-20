@@ -4,10 +4,10 @@ import HeaderSection from "../components/HeaderSection";
 import ProjectSection from "../components/ProjectSection";
 import { Project } from "../types/Project";
 import { ThemeProvider } from "styled-components";
-import Theme from "../theme";
+import { DefaultTheme } from "styled-components/dist/types";
 
 
-const theme: Theme = {
+const theme: DefaultTheme = {
     backgroundColor: '#242424',
     containerColor: '#484A47',
     textColorPrimary: '#ffffffde',
