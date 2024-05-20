@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import Logo from "./Logo";
 
 export default function NavBar() {
     const [active, setActive] = useState('Home')
@@ -11,7 +12,7 @@ export default function NavBar() {
 
     return (
         <Nav>
-            <Logo>Your Logo</Logo>
+            <Logo />
             <NavItems>
                 {['Home', 'Portfolio', 'Blog', 'About Me', 'Contact Me'].map((navItem) => (
                     <NavItem key={navItem}>
@@ -39,10 +40,7 @@ const Nav = styled.nav`
     height: 48px;
 `;
 
-const Logo = styled.div`
-    color: #fff;
-    font-size: 1.5em;
-`;
+
 
 const NavItems = styled.ul`
     list-style: none;
@@ -65,17 +63,6 @@ const NavLink = styled.a`
     /* if active or hovered, add purple bar below. */
     &.active,
     &:hover {
-        border-bottom: 3px solid purple;
+        border-bottom: 3px solid #C751FF;
     }
-    /* &.active::after,
-    &:hover::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: purple;
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-    } */
 `;
