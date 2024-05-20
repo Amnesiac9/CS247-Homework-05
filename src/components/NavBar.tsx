@@ -77,7 +77,7 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #484A47;
+    background-color: ${({ theme }) => theme.containerColor};;
     padding: 0px 20px;
     height: 48px;
     position: relative;
@@ -125,7 +125,7 @@ const NavItem = styled.li`
 `
 
 const NavLink = styled.a`
-    color: #fff;
+    color: ${({ theme }) => theme.textColorPrimary};
     text-decoration: none;
     padding: 10px 15px;
     display: inline-block;

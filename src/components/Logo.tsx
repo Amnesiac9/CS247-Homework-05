@@ -11,7 +11,7 @@ export default function Logo() {
 }
 
 const LogoArea = styled.div`
-    color: #fff;
+    color: ${({ theme }) => theme.textColorPrimary};
     display: flex;
     align-items: center;
 `

@@ -13,7 +13,6 @@ export default function ProjectSection(props: { Projects: Project[] }) {
             <FlexSection>
                 {props.Projects.map((proj, i) =>
                     <StyledCard key={i} title={proj.title} summary={proj.summary} image={proj.image} link={proj.link} />
-
                 )}
             </FlexSection>
         </Container>

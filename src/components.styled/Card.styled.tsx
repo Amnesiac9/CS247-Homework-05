@@ -1,8 +1,9 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, DefaultTheme } from 'styled-components';
 
 export default function Card(props: { title: string, summary: string, image: string, link: string }) {
+
     return (
-        <StyledCard >
+        <StyledCard onClick={() => { window.open(props.link) }}>
             <TopImage alt={props.title} src={props.image} />
             <Title>{props.title}</Title>
             <Summary>{props.summary}</Summary>
@@ -12,20 +13,25 @@ export default function Card(props: { title: string, summary: string, image: str
 
 
 
-const grow = keyframes`
+const grow = (theme: DefaultTheme) => keyframes`
     from {
+        /* 00 is opacity 0 */
+        box-shadow: 0 0 0px ${theme.accentColor};
         transform: scale(1);
     }
     to {
-        transform: scale(1.05);
+        box-shadow: 0 0 8px ${theme.accentColor};
+        transform: scale(1.02);
     }
 `
 
-const shrink = keyframes`
+const shrink = (theme: DefaultTheme) => keyframes`
     from {
-        transform: scale(1.05);
+        box-shadow: 0 0 8px ${theme.accentColor};
+        transform: scale(1.02);
     }
     to {
+        box-shadow: 0 0 0px ${theme.accentColor};
         transform: scale(1);
     }
 `
@@ -36,14 +42,15 @@ const StyledCard = styled.div`
     margin: 15px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     border: 1px solid ${({ theme }) => theme.borderColor};
 
     &:hover{
-        animation: ${grow} 250ms forwards;
+        animation: ${({ theme }) => grow(theme)} 250ms forwards;
     }
 
     &:not(:hover){
-        animation: ${shrink} 200ms forwards;
+        animation: ${({ theme }) => shrink(theme)} 225ms forwards;
     }
     
 `
@@ -52,7 +59,7 @@ const TopImage = styled.img`
     width: 100%;
     height: 50%;
     overflow: hidden;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 `
 
