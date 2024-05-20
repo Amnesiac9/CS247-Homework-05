@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 import NavBar from "../components/NavBar";
+import HeaderSection from "../components/HeaderSection";
+import ProjectSection from "../components/ProjectSection";
 
 const ThemeContext = createContext('')
 
@@ -16,7 +18,8 @@ export default function HomePage() {
                 activePage={activePage}
                 setActivePage={setActivePage}
             />
-            <div>Content here</div>
+            <HeaderSection />
+            <ProjectSection />
         </>
     )
 }
