@@ -19,11 +19,11 @@ export default function NavBar(props: { pages: string[], activePage: string, set
             setTimeout(() => {
                 setIsOpen(false);
                 setIsMoving(false);
-            }, 300); // Duration of the slide-out animation
+            }, 300);
         } else {
             setIsOpen(true);
         }
-    };
+    }
 
 
     const handleNavClick = (navItem: string) => {
@@ -81,7 +81,7 @@ const Nav = styled.nav`
     padding: 0px 20px;
     height: 48px;
     position: relative;
-`;
+`
 
 const NavItems = styled.ul`
     list-style: none;
@@ -98,7 +98,7 @@ const NavItems = styled.ul`
         position: absolute;
         top: 48px;
         right: 0;
-        background-color: #484A47;
+        background-color: ${({ theme }) => theme.containerColor};
         width: 133px;
         height: 95vh;
         /* padding: 10px 0; */
@@ -122,7 +122,7 @@ const NavItem = styled.li`
     @media (max-width: 775px) {
         margin: 10px 0;
     }
-`;
+`
 
 const NavLink = styled.a`
     color: #fff;
@@ -134,16 +134,14 @@ const NavLink = styled.a`
     /* if active or hovered, add purple bar below. */
     &.active,
     &:hover {
-        border-bottom: 3px solid #C751FF;
+        border-bottom: 3px solid ${({ theme }) => theme.accentColor};
     }
 
     @media (max-width: 775px) {
         &.active,
         &:hover {
-            border-left: 3px solid #C751FF;
+            border-left: 3px solid ${({ theme }) => theme.accentColor};;
             border-bottom: none;
-            /* https://www.w3schools.com/css/css3_animations.asp */
-            /* animation: ${hoverFade} 0.3s forwards */
         }
     }
 `
