@@ -5,6 +5,7 @@ import ProjectSection from "../components/ProjectSection";
 import { Project } from "../types/Project";
 import { ThemeProvider } from "styled-components";
 import { DefaultTheme } from "styled-components/dist/types";
+import Body from "../components.styled/Body.styled";
 
 
 // TODO:
@@ -51,13 +52,18 @@ export default function HomePage() {
     const [activePage, setActivePage] = useState('Home')
     return (
         <ThemeProvider theme={theme}>
+
+
+
             <NavBar
                 pages={pages}
                 activePage={activePage}
                 setActivePage={setActivePage}
             />
-            <HeaderSection />
-            <ProjectSection Projects={projects} />
+            <Body>
+                <HeaderSection />
+                <ProjectSection Projects={projects} />
+            </Body>
         </ThemeProvider>
     )
 }
