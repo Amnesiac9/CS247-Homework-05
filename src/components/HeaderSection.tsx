@@ -29,13 +29,11 @@ const HeaderArea = styled.div`
 
 
 const ProfilePicture = styled.img`
-    
     width: 250px;
     height: auto;
     object-fit: cover;
     display: block;
     margin-left: 10px;
-
 
     @media (max-width: ${({ theme }) => theme.breakpoints.laptopMin}) {
         margin: 0 auto 10px auto;
@@ -43,12 +41,12 @@ const ProfilePicture = styled.img`
         max-height: 368px;
     }
 `
+
 const H2 = styled.h2`
     font-size: 32px;
     font-weight: 500;
     line-height: 38.73px;
 
-    
     @media (max-width: ${({ theme }) => theme.breakpoints.laptopMax}) {
         font-size: 24px;
         line-height: 29.05px;

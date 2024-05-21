@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import Flex from "../components.styled/Flex.styled";
-import Container from "../components.styled/Container.styled";
-import Divider from "../components.styled/Divider.styled";
-import { Project } from "../types/Project";
-import StyledCard from "../components.styled/Card.styled";
+import styled from 'styled-components';
+import Flex from '../components.styled/Flex.styled';
+import Container from '../components.styled/Container.styled';
+import Divider from '../components.styled/Divider.styled';
+import { Project } from '../types/Project';
+import StyledCard from '../components.styled/Card.styled';
 
 export default function ProjectSection(props: { Projects: Project[] }) {
     return (

@@ -1,15 +1,13 @@
-import { useState } from "react";
-import { Project } from "../types/Project";
-import { ThemeProvider } from "styled-components";
-import { DefaultTheme } from "styled-components/dist/types";
-import NavBar from "../components/NavBar";
-import HeaderSection from "../components/HeaderSection";
-import ProjectSection from "../components/ProjectSection";
-import Body from "../components.styled/Body.styled";
+import { useState } from 'react';
+import { Project } from '../types/Project';
+import { ThemeProvider } from 'styled-components';
+import { DefaultTheme } from 'styled-components/dist/types';
+import NavBar from '../components/NavBar';
+import HeaderSection from '../components/HeaderSection';
+import ProjectSection from '../components/ProjectSection';
+import Body from '../components.styled/Body.styled';
 import SplitterImage from '../assets/SplitterIcon.png'
 import MarsBytesLogo from '../assets/MARSBYTES Logo Only.svg'
-
-
 
 // breakpoints (Desktop >= 1200px, Laptop < 1200px AND >= 800px, Mobile <= 400px)
 const theme: DefaultTheme = {
@@ -24,7 +22,6 @@ const theme: DefaultTheme = {
         mobile: '550px',
     }
 };
-
 
 const pages = ['Home', 'Portfolio', 'Blog', 'About Me', 'Contact Me']
 
@@ -75,9 +72,6 @@ export default function HomePage() {
     const [activePage, setActivePage] = useState('Home')
     return (
         <ThemeProvider theme={theme}>
-
-
-
             <NavBar
                 pages={pages}
                 activePage={activePage}

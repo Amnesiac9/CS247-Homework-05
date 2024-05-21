@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import marsBytesLogo from '../assets/MARSBYTES Logo Only.svg'
 
 export default function Logo() {
@@ -14,6 +14,7 @@ const LogoArea = styled.div`
     color: ${({ theme }) => theme.textColorPrimary};
     display: flex;
     align-items: center;
+    
 `
 
 const Icon = styled.img`

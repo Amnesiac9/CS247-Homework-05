@@ -1,7 +1,7 @@
 
-import styled, { keyframes } from "styled-components";
-import Logo from "./Logo";
-import { useState } from "react";
+import styled, { keyframes } from 'styled-components';
+import Logo from './Logo';
+import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 
 
@@ -43,7 +43,7 @@ export default function NavBar(props: { pages: string[], activePage: string, set
                 {props.pages.map((navItem) => (
                     <NavItem key={navItem}>
                         <NavLink
-                            href="#"
+                            href='#'
                             className={props.activePage === navItem ? 'active' : ''}
                             onClick={() => handleNavClick(navItem)}
                         >
@@ -56,6 +56,7 @@ export default function NavBar(props: { pages: string[], activePage: string, set
     )
 }
 
+// Animations for mobile hidden side nav.
 const slideIn = keyframes`
     from {
         transform: translateX(100%);
@@ -86,11 +87,9 @@ const Nav = styled.nav`
     position: relative;
     z-index: 999;
     
-
     @media (max-width: ${({ theme }) => theme.breakpoints.laptopMax}) {
         font-size: 14px;
     }
-
 
 `
 
@@ -130,8 +129,6 @@ const NavItems = styled.ul`
 
 const NavItem = styled.li`
     margin-left: 20px;
-
-
     
     @media (max-width: ${({ theme }) => theme.breakpoints.laptopMin}) {
         margin: 10px 0;
@@ -178,7 +175,7 @@ const HamburgerMenu = styled.div`
 
     }
 `
-
+// Dark overlay on main body while side panel is open
 const Overlay = styled.div`
     display: none;
     position: fixed;

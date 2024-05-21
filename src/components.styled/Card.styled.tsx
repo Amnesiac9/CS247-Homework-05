@@ -11,8 +11,6 @@ export default function Card(props: { title: string, summary: string, image: str
     )
 }
 
-
-
 const grow = (theme: DefaultTheme) => keyframes`
     from {
         /* 00 is opacity 0 */
@@ -76,11 +74,10 @@ const TopImage = styled.img<{ $topBottomPadding?: string }>`
     overflow: hidden;
     object-fit: contain;
     object-position: center;
-    padding: ${(props) => `${props.$topBottomPadding || '0'} 0`};
+    padding: ${(props) => `${props.$topBottomPadding || '0'} 0`}; // Optional padding for images on top and bottom
 
 
     @media (max-width: ${({ theme }) => theme.breakpoints.laptopMax}) {
-        /* min-width: 150px; */
         min-height: 15%;
     }
 
