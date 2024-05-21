@@ -21,6 +21,11 @@ const theme: DefaultTheme = {
     textColorPrimary: '#ffffffde',
     accentColor: '#C851FF',
     borderColor: '#4D4B4B',
+    breakpoints: {
+        laptopMax: '1200px',
+        laptopMin: '800px',
+        mobile: '550px',
+    }
 };
 
 
@@ -29,21 +34,39 @@ const pages = ['Home', 'Portfolio', 'Blog', 'About Me', 'Contact Me']
 const projects: Project[] = [
     {
         title: 'Quick Inventory',
-        summary: 'A software for mass updating inventory numbers on Commerce7.',
+        summary: 'A software for mass updating inventory numbers on Commerce7.com',
         image: 'https://marsbytesapps.com/wp-content/uploads/2023/09/upload.png',
         link: 'https://marsbytesapps.com/quick-inventory/',
     },
     {
         title: 'ShipStation Custom Store',
-        summary: 'Pulls orders from Commerce7 in JSON format, and converts to XML for ShipStation, then pushes tracking notifications back.',
+        summary: 'Sync orders from Commerce7 directly to ShipStation for fulfillment.',
         image: 'https://marsbytesapps.com/wp-content/uploads/2023/09/shipstation-logo-dark-1024x241.png',
         link: 'https://marsbytesapps.com/shipstation/',
     },
     {
-        title: 'Bulk Product Update',
-        summary: 'UI interface for mass updating products on the Commerce7 platform.',
-        image: 'https://marsbytesapps.com/wp-content/uploads/2023/09/shipstation-logo-dark-1024x241.png',
+        title: 'Bulk Product Updater',
+        summary: 'UI interface for mass updating products on Commerce7.com',
+        image: 'https://marsbytesapps.com/wp-content/uploads/2024/05/productUpdateIcon.png',
         link: 'https://marsbytesapps.com/bulk-product-update/',
+    },
+    {
+        title: 'Transaction Splitter',
+        summary: 'My first web application. Split a number into unique amounts.',
+        image: '../assets/SplitterIcon.png',
+        link: 'https://marsbytesapps.com/bulk-product-update/',
+    },
+    {
+        title: 'Placeholder',
+        summary: 'Coming soon!',
+        image: '../assets/SplitterIcon.png',
+        link: '#',
+    },
+    {
+        title: 'Placeholder',
+        summary: 'Coming soon!',
+        image: '../assets/SplitterIcon.png',
+        link: '#',
     }
 ]
 

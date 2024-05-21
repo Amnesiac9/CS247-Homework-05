@@ -8,5 +8,10 @@ declare module 'styled-components' {
         textColorPrimary: string,
         accentColor: string,
         borderColor: string,
+        breakpoints: {
+            laptopMax: string,
+            laptopMin: string,
+            mobile: string,
+        }
     }
 }

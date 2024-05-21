@@ -39,11 +39,14 @@ const shrink = (theme: DefaultTheme) => keyframes`
 const StyledCard = styled.div`
     width: 200px;
     height: 200px;
+    min-width: 200px;
+    min-height: 200px;
     margin: 15px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    border: 1px solid ${({ theme }) => theme.borderColor};
+    border: 2px solid ${({ theme }) => theme.borderColor};
+    border-radius: 4px;
 
     &:hover{
         animation: ${({ theme }) => grow(theme)} 250ms forwards;
@@ -53,9 +56,15 @@ const StyledCard = styled.div`
         animation: ${({ theme }) => shrink(theme)} 225ms forwards;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.laptopMax})  {
         width: 150px;
         height: 150px;
+        min-width: 150px;
+        min-height: 150px;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile})  {
+        margin: 15px 10px;
     }
     
 `
@@ -63,9 +72,17 @@ const StyledCard = styled.div`
 const TopImage = styled.img`
     width: 100%;
     height: 50%;
+    min-height: 50%;
     overflow: hidden;
     object-fit: contain;
     object-position: center;
+
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.laptopMax}) {
+        /* min-width: 150px; */
+        min-height: 15%;
+    }
+
 `
 
 const Title = styled.h5`

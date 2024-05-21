@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import FlexSection from "../components.styled/Section.styled";
+import Flex from "../components.styled/Flex.styled";
 import Container from "../components.styled/Container.styled";
 import Divider from "../components.styled/Divider.styled";
 import { Project } from "../types/Project";
@@ -10,11 +10,11 @@ export default function ProjectSection(props: { Projects: Project[] }) {
         <Container>
             <H3>My current projects</H3>
             <Divider />
-            <FlexSection $flexFlow='wrap'>
+            <Flex $flexFlow='wrap'>
                 {props.Projects.map((proj, i) =>
                     <StyledCard key={i} title={proj.title} summary={proj.summary} image={proj.image} link={proj.link} />
                 )}
-            </FlexSection>
+            </Flex>
         </Container>
     )
 }
