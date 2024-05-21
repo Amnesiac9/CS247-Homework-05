@@ -8,10 +8,10 @@ export default function HeaderSection() {
             <HeaderArea>
                 <div>
                     <H2>Welcome to Resposive Web Design</H2>
-                    <p>
+                    <About>
                         Hi there, my name is John Moreau. I've built 3 web apps in the past year with over 50 wineries using them for their daily business.
                         I'm just getting started. Thanks for visiting my test portfolio website, built using <a href='https://react.dev/'>React</a> & <a href='https://styled-components.com/'>Styled Components.</a>
-                    </p>
+                    </About>
                 </div>
                 <ProfilePicture alt='picture of author' src={picture} />
             </HeaderArea>
@@ -53,5 +53,13 @@ const H2 = styled.h2`
         font-size: 24px;
         line-height: 29.05px;
         margin-top: 4px;
+    }
+`
+
+const About = styled.p`
+    font-weight: 400;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.laptopMax}) {
+        font-size: 14px;
     }
 `

@@ -25,4 +25,10 @@ const H3 = styled.h3`
     line-height: 29.05px;
     font-weight: 500;
     margin-bottom: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.laptopMax}) {
+        font-size: 20px;
+        line-height: 24.2px;
+    }
+
 `
