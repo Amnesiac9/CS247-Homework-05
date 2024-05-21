@@ -1,10 +1,10 @@
 import styled, { keyframes, DefaultTheme } from 'styled-components';
 
-export default function Card(props: { title: string, summary: string, image: string, link: string }) {
+export default function Card(props: { title: string, summary: string, image: string, imagePadding?: string, link: string }) {
 
     return (
         <StyledCard onClick={() => { window.open(props.link) }}>
-            <TopImage alt={props.title} src={props.image} />
+            <TopImage $topBottomPadding={props.imagePadding} alt={props.title} src={props.image} />
             <Title>{props.title}</Title>
             <Summary>{props.summary}</Summary>
         </StyledCard>
@@ -69,13 +69,14 @@ const StyledCard = styled.div`
     
 `
 
-const TopImage = styled.img`
+const TopImage = styled.img<{ $topBottomPadding?: string }>`
     width: 100%;
     height: 50%;
     min-height: 50%;
     overflow: hidden;
     object-fit: contain;
     object-position: center;
+    padding: ${(props) => `${props.$topBottomPadding || '0'} 0`};
 
 
     @media (max-width: ${({ theme }) => theme.breakpoints.laptopMax}) {

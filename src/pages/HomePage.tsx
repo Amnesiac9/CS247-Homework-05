@@ -1,20 +1,17 @@
 import { useState } from "react";
-import NavBar from "../components/NavBar";
-import HeaderSection from "../components/HeaderSection";
-import ProjectSection from "../components/ProjectSection";
 import { Project } from "../types/Project";
 import { ThemeProvider } from "styled-components";
 import { DefaultTheme } from "styled-components/dist/types";
+import NavBar from "../components/NavBar";
+import HeaderSection from "../components/HeaderSection";
+import ProjectSection from "../components/ProjectSection";
 import Body from "../components.styled/Body.styled";
+import SplitterImage from '../assets/SplitterIcon.png'
+import MarsBytesLogo from '../assets/MARSBYTES Logo Only.svg'
 
 
-// TODO:
-// 1) Fix menu height on mobile. Should be 100%.
-// 2) Fix menu not being on top.
-// 3) Fix reponsivness of projects on mobile to always have two by two.
-// 4) Fix breakpoints (Desktop >= 1200px, Laptop < 1200px AND >= 800px, Mobile <= 400px)
 
-
+// breakpoints (Desktop >= 1200px, Laptop < 1200px AND >= 800px, Mobile <= 400px)
 const theme: DefaultTheme = {
     backgroundColor: '#242424',
     containerColor: '#484A47',
@@ -53,20 +50,23 @@ const projects: Project[] = [
     {
         title: 'Transaction Splitter',
         summary: 'My first web application. Split a number into unique amounts.',
-        image: '../assets/SplitterIcon.png',
-        link: 'https://marsbytesapps.com/bulk-product-update/',
+        image: SplitterImage,
+        imageTopBottomPadding: '8px',
+        link: 'https://marsbytes.dev/splitinator/',
     },
     {
         title: 'Placeholder',
         summary: 'Coming soon!',
-        image: '../assets/SplitterIcon.png',
-        link: '#',
+        image: MarsBytesLogo,
+        imageTopBottomPadding: '4px',
+        link: 'https://marsbytesapps.com/',
     },
     {
         title: 'Placeholder',
         summary: 'Coming soon!',
-        image: '../assets/SplitterIcon.png',
-        link: '#',
+        image: MarsBytesLogo,
+        imageTopBottomPadding: '4px',
+        link: 'https://marsbytesapps.com/',
     }
 ]
 

@@ -85,6 +85,7 @@ const Nav = styled.nav`
     height: 48px;
     position: relative;
     z-index: 999;
+    
 
     @media (max-width: ${({ theme }) => theme.breakpoints.laptopMax}) {
         font-size: 14px;
@@ -99,7 +100,7 @@ const NavItems = styled.ul`
     margin: 0;
     padding: 0;
     z-index: 996;
-
+    
 
     /* Switch nav items to only show on menu click for small screens */
     @media (max-width: ${({ theme }) => theme.breakpoints.laptopMin}) {

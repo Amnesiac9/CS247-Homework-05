@@ -12,7 +12,7 @@ export default function ProjectSection(props: { Projects: Project[] }) {
             <Divider />
             <Flex $flexFlow='wrap'>
                 {props.Projects.map((proj, i) =>
-                    <StyledCard key={i} title={proj.title} summary={proj.summary} image={proj.image} link={proj.link} />
+                    <StyledCard key={i} title={proj.title} summary={proj.summary} image={proj.image} imagePadding={proj.imageTopBottomPadding} link={proj.link} />
                 )}
             </Flex>
         </Container>

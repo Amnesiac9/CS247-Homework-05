@@ -2,12 +2,10 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-size: 16px;
-    /* font-weight: 400; */
     margin: 0 auto;
     color-scheme: light dark;
     color: #e8e8e8;
     background-color: #242424;
-
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -22,7 +20,7 @@ body {
 
 @media (prefers-color-scheme: light) {
     :root {
-        color: #213547;
+        color: #1e2021;
         background-color: #ffffff;
     }
 }
