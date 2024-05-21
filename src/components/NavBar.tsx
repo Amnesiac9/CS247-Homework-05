@@ -85,6 +85,12 @@ const Nav = styled.nav`
     height: 48px;
     position: relative;
     z-index: 999;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.laptopMax}) {
+        font-size: 14px;
+    }
+
+
 `
 
 const NavItems = styled.ul`
@@ -124,6 +130,8 @@ const NavItems = styled.ul`
 const NavItem = styled.li`
     margin-left: 20px;
 
+
+    
     @media (max-width: ${({ theme }) => theme.breakpoints.laptopMin}) {
         margin: 10px 0;
     }
